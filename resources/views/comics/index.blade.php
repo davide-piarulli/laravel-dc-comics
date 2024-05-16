@@ -13,7 +13,7 @@
               <p class="card-text">{{ $comic->series }}</p>
               <p class="card-text">{{ $comic->type }}</p>
               <p class="card-text">{{ $comic->price }}</p>
-              <a href="#" class="btn btn-primary">Dettaglio</a>
+              <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary">Dettaglio</a>
             </div>
           </div>
         </div>
