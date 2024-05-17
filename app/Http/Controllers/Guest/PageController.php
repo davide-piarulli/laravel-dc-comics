@@ -12,8 +12,8 @@ class PageController extends Controller
         return view('home');
     }
 
-    public function newpage()
+    public function newcomic()
     {
-        return view('new-page');
+        return view('new-comic');
     }
 }
