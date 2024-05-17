@@ -8,8 +8,19 @@
           <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
           <div>
             <h1>{{ $comic->title }}</h1>
-            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
-            <a class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+            <div class="d-flex">
+
+              <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning me-2 "><i
+                  class="fa-solid fa-pencil"></i></a>
+
+              <form action="{{ route('comics.destroy', $comic) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+              </form>
+            </div>
+
+
             <h2>Serie: {{ $comic->series }}</h2>
             <h2>Tipologia: {{ $comic->type }}</h2>
             <p>Data di uscita: {{ $comic->sale_date }}</p>
