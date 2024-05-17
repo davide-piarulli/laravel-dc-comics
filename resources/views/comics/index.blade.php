@@ -14,6 +14,8 @@
               <p class="card-text">{{ $comic->type }}</p>
               <p class="card-text">{{ $comic->price }}</p>
               <a href="{{ route('comics.show', $comic) }}" class="btn btn-primary">Dettaglio</a>
+              <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
+              {{-- <a href="{{ route('comics.delete', $comic) }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a> --}}
             </div>
           </div>
         </div>
