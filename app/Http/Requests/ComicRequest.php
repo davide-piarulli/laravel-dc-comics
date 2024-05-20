@@ -23,14 +23,14 @@ class ComicRequest extends FormRequest
     {
         return [
             'title' => 'required|min:2|max:100',
-            'description' => 'required|min:2|max:500',
             'thumb' => 'required|min:10|max:500',
             'price' => 'required|min:5|max:10',
             'series' => 'required|min:2|max:50',
             'sale_date' => 'max:10',
             'type' => 'required|min:2|max:50',
-            'artists' => 'min:10|max:500',
-            'writers' => 'min:10|max:500',
+            'artists' => 'max:500',
+            'writers' => 'max:500',
+            'description' => 'required|min:2|max:500',
         ];
     }
 
@@ -38,28 +38,26 @@ class ComicRequest extends FormRequest
     {
         return [
             'title.required' => 'Il titolo è obbligatorio',
-            'title.min' => 'Il titolo deve contenere almeno 2 caratteri',
-            'title.max' => 'Il titolo può contenere massimo 100 caratteri',
+            'title.min' => 'Il titolo deve contenere almeno :min caratteri',
+            'title.max' => 'Il titolo può contenere massimo :max caratteri',
             'description.required' => 'La descrizione è obbligatoria',
-            'description.min' => 'La descrizione deve contenere almeno 2 caratteri',
-            'description.max' => 'La descrizione può contenere massimo 500 caratteri',
+            'description.min' => 'La descrizione deve contenere almeno :min caratteri',
+            'description.max' => 'La descrizione può contenere massimo :max caratteri',
             'thumb.required' => 'La URL dell\' immagine è obbligatoria',
-            'thumb.min' => 'La URL dell\' immagine deve contenere almeno 10 caratteri',
-            'thumb.max' => 'La URL dell\' immagine può contenere massimo 500 caratteri',
+            'thumb.min' => 'La URL dell\' immagine deve contenere almeno :min caratteri',
+            'thumb.max' => 'La URL dell\' immagine può contenere massimo :max caratteri',
             'price.required' => 'Il prezzo è obbligatorio',
-            'price.min' => 'Il prezzo deve contenere almeno 5 caratteri',
-            'price.max' => 'Il prezzo può contenere massimo 10 caratteri',
+            'price.min' => 'Il prezzo deve contenere almeno :min caratteri',
+            'price.max' => 'Il prezzo può contenere massimo :max caratteri',
             'series.required' => 'La serie è obbligatoria',
-            'series.min' => 'La serie deve contenere almeno 2 caratteri',
-            'series.max' => 'La serie può contenere massimo 50 caratteri',
-            'sale_date.max' => 'La data di uscita può contenere massimo 10 caratteri',
+            'series.min' => 'La serie deve contenere almeno :min caratteri',
+            'series.max' => 'La serie può contenere massimo :max caratteri',
+            'sale_date.max' => 'La data di uscita può contenere massimo :max caratteri',
             'type.required' => 'La tipologia è obbligatoria',
-            'type.min' => 'La tipologia deve contenere almeno 2 caratteri',
-            'type.max' => 'La tipologia può contenere massimo 50 caratteri',
-            'artists.min' => 'Il campo artisti deve contenere almeno 10 caratteri',
-            'artists.max' => 'Il campo artisti può contenere massimo 500 caratteri',
-            'writers.min' => 'Il campo scrittori deve contenere almeno 10 caratteri',
-            'writers.max' => 'Il campo scrittori può contenere massimo 500 caratteri',
+            'type.min' => 'La tipologia deve contenere almeno :min caratteri',
+            'type.max' => 'La tipologia può contenere massimo :max caratteri',
+            'artists.max' => 'Il campo artisti può contenere massimo :max caratteri',
+            'writers.max' => 'Il campo scrittori può contenere massimo :max caratteri',
         ];
     }
 }
