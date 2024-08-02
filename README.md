@@ -1,18 +1,15 @@
-CRUD TODO LIST
+## PRIMA CRUD LARAVEL - PHP
 
-1. clonare il template ok
-2. creare la migration ok
-3. creare il model ok
-4. popolare la tabella con il seeder (dall’array presente in config) ok
-5. creare il resource controller (php artisan make:controller --resource NomeController) ok
-6. creare le rotte resource (Route::resource('nome_tabella', MioResourceController::class);) ok
-7. relativamente alle rotte GET creare le view in una cartella con il nome della tabella della CRUD e con il nome del metodo del resource controller relativo
-   Per la navigazione
+![dc comics preview](https://github.com/user-attachments/assets/c883dad1-a23f-45aa-9575-d8ea8daee44c)
+![dc comics edit preview](https://github.com/user-attachments/assets/3d01940f-fdab-4d8e-9675-8efcd738973b)
 
--   la rotta home è fuori dalla CRUD (se si s vuole si può stampatre il numero di card presenti)
--   elenco prodotti (GET index)
--   dettaglio prodotto (GET show)
--   form nuovo prodotto (GET create) (ricordarsi il token @csrf)
--   rotta per salvare i dati provenienti dal form create (POST store)
--   una volta salvati i dati reindirizzare alla show (return redirect()->route('mia_tabella.show', $new_elemento);)
-    Oggi arrivate almeno alla show ma se riuscite a partarvi avanti con la create/store è meglio così domani avrete meno da fare ;-)
+## Descrizione
+Questo progetto è una libreria online di fumetti creata utilizzando Laravel. Gli utenti possono visualizzare un elenco di fumetti, vedere i dettagli di ciascun fumetto, aggiungere nuovi fumetti, modificarli ed eliminarli. L'interfaccia è semplice e intuitiva, permettendo una facile navigazione tra i fumetti disponibili.
+
+## Funzionalità
+- **Elenco Fumetti:** Visualizza un elenco di tutti i fumetti disponibili con titolo, descrizione, prezzo e immagine di copertina.
+- **Dettagli Fumetto:** Clicca su "Dettaglio" per vedere le informazioni dettagliate su un fumetto.
+- **Aggiungi Fumetto:** Aggiungi un nuovo fumetto alla libreria tramite il modulo di inserimento.
+- **Modifica Fumetto:** Modifica le informazioni di un fumetto esistente.
+- **Elimina Fumetto:** Rimuovi un fumetto dalla libreria.
+
